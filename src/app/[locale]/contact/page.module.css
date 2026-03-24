@@ -1,0 +1,264 @@
+/* ─────────────────────────────────────────────────────────────
+   CONTACT PAGE — original design (dark teal map + form)
+   ───────────────────────────────────────────────────────────── */
+
+/* ── MAP SECTION ──────────────────────────────────────────── */
+.mapSection {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  background-color: #102e2e;
+  background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.mapOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 46, 46, 0.4) 0%, rgba(16, 46, 46, 0.7) 50%, rgba(16, 46, 46, 0.95) 100%);
+}
+
+.mapBg {
+  position: absolute;
+  inset: 0;
+}
+
+.mapMarker {
+  position: absolute;
+  color: #c5a059;
+  filter: drop-shadow(0 2px 8px rgba(197,160,89,0.3));
+  animation: pinBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes pinBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.mapInner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  width: 100%;
+}
+
+.officeTextList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-right: 2rem; /* Add some padding so it doesn't hug the edge */
+}
+
+.officeTextItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.officeNameText {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #c5a059;
+  margin-bottom: 0.4rem;
+}
+
+.officeLineText {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── FORM SECTION ─────────────────────────────────────────── */
+.formSection {
+  background-color: #1d3f3f;
+  padding: 5rem 0 6rem;
+}
+
+.formTitle {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+/* Bottom-border-only input style */
+.input {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  padding: 1rem 0 0.75rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s;
+  resize: none;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+}
+
+.input:focus {
+  border-bottom-color: #c5a059;
+}
+
+textarea.input {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  min-height: 120px;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.5rem;
+}
+
+.submitBtn {
+  background: #c5a059;
+  color: #ffffff;
+  padding: 0.85rem 2.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+
+.submitBtn:hover {
+  background: #b38b45;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .mapSection   { height: auto; min-height: 360px; }
+  .officeCards  { flex-direction: column; position: static; transform: none; padding: 1.5rem; }
+  .formRow      { grid-template-columns: 1fr; }
+  .ctaActions   { flex-direction: column; align-items: stretch; }
+}
+
+/* ── CTA BANNER ───────────────────────────────────────────── */
+.cta {
+  position: relative;
+  padding: 8rem 0;
+  background-color: #091a19;
+  background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 26, 25, 0.9);
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaGoldLine {
+  width: 52px;
+  height: 3px;
+  background: var(--color-secondary, #c5a059);
+  border-radius: 2px;
+  margin: 0 auto 2rem;
+}
+
+.ctaTitle {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnGold {
+  display: inline-block;
+  background: var(--color-secondary, #c5a059);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background 0.25s, transform 0.2s;
+  text-decoration: none;
+}
+.btnGold:hover {
+  background: #b38b45;
+  transform: translateY(-2px);
+  color: #fff;
+}
+.btnCtaOutline {
+  display: inline-block;
+  border: 2px solid rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.85);
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.25s, color 0.25s, transform 0.2s;
+}
+.btnCtaOutline:hover {
+  border-color: var(--color-secondary, #c5a059);
+  color: var(--color-secondary, #c5a059);
+  transform: translateY(-2px);
+}

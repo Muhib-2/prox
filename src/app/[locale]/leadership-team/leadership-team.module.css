@@ -1,0 +1,173 @@
+/* ============================================================
+   LEADERSHIP PAGE — PRESIDENT HERO & TEAM
+   ============================================================ */
+
+.presidentHero {
+  position: relative;
+  background: linear-gradient(135deg, #061615 0%, #0d2826 100%);
+  padding: 100px 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroHeader {
+  margin-bottom: 2.5rem;
+}
+
+.brandName {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: -0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pageTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.goldLine {
+  width: 100px;
+  height: 4px;
+  background: #c5a059;
+}
+
+.presidentName {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #139088;
+  margin-bottom: 0.75rem;
+}
+
+.presidentTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.presidentBio {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  max-width: 580px;
+}
+
+.linkedinIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #0077b5;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.linkedinIcon:hover {
+  transform: scale(1.1);
+}
+
+.heroRight {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.presidentImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Arcs from Screenshot */
+.arcTeal {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  border: 40px solid #139088;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-15deg);
+  opacity: 0.6;
+}
+
+.arcGray {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  border: 40px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(45deg);
+}
+
+/* Red line at bottom */
+.bottomLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #c5a059;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  .heroLeft {
+    align-items: center;
+  }
+  .presidentBio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .heroRight {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageTitle { font-size: 2.5rem; }
+  .presidentName { font-size: 1.8rem; }
+  .arcTeal, .arcGray { display: none; }
+}

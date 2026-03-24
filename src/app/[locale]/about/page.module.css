@@ -1,0 +1,260 @@
+/* ============================================================
+   ABOUT PAGE — teal #139088 · gold #c5a059
+   ============================================================ */
+
+@keyframes heroFadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:none; } }
+@keyframes shimmerLine {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.animatedLine {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.8), transparent);
+  background-size: 1000px 100%;
+  animation: shimmerLine 3s infinite linear;
+  margin: 0;
+}
+
+.page { overflow-x: hidden; }
+
+/* ── Shared ─────────────────────────────────────────────────── */
+.sectionTitle {
+  font-size: clamp(1.8rem,3.5vw,2.75rem); font-weight: 800;
+  color: var(--color-dark); line-height: 1.15; margin-bottom: 0.5rem;
+}
+.sectionTitleWhite {
+  font-size: clamp(1.8rem,3.5vw,2.75rem); font-weight: 800;
+  color: #fff; line-height: 1.15; margin-bottom: 0.5rem;
+}
+.centerHeader { text-align: center; max-width: 800px; margin: 0 auto 3.5rem; }
+.chipTeal {
+  display: inline-block; background: rgba(19,144,136,0.12); color: var(--color-primary);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1rem;
+}
+.chipGold {
+  display: inline-block; background: rgba(197,160,89,0.15); color: var(--color-secondary);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1rem;
+}
+.goldBar       { width:52px; height:3px; background:var(--color-secondary); border-radius:2px; margin:1.25rem 0 2rem; }
+.goldBarCenter { width:52px; height:3px; background:var(--color-secondary); border-radius:2px; margin:1.25rem auto 0; }
+
+.btnGold {
+  display: inline-block; background: var(--color-secondary); color: #fff;
+  padding: 0.8rem 2rem; border-radius: 6px;
+  font-weight: 700; font-size: 0.88rem; letter-spacing: 0.05em; text-transform: uppercase;
+  text-decoration: none; transition: background 0.25s, transform 0.2s;
+}
+.btnGold:hover { background: var(--color-secondary-dark); transform: translateY(-2px); color: #fff; }
+.btnOutline {
+  display: inline-block; border: 2px solid var(--color-primary); color: var(--color-primary);
+  padding: 0.8rem 2rem; border-radius: 6px;
+  font-weight: 700; font-size: 0.88rem; letter-spacing: 0.05em; text-transform: uppercase;
+  text-decoration: none; transition: all 0.25s;
+}
+.btnOutline:hover { border-color: var(--color-secondary); color: var(--color-secondary); transform: translateY(-2px); }
+
+/* ── 1. HERO ─────────────────────────────────────────────── */
+.hero {
+  position: relative; min-height: 62vh; display: flex; align-items: center;
+  background-color: #0a1f1e;
+  background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover; background-position: center; overflow: hidden;
+}
+.heroOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, rgba(10,31,30,0.94) 0%, rgba(10,31,30,0.72) 100%);
+}
+.heroBar {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+  background-size: 200% 100%; animation: shimmer 3s linear infinite;
+}
+.heroInner { position: relative; z-index: 2; max-width: 800px; padding: 2rem 0; }
+.heroChip {
+  display: inline-block; background: rgba(197,160,89,0.2); border: 1px solid rgba(197,160,89,0.4);
+  color: var(--color-secondary); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em;
+  text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem;
+  animation: heroFadeIn 0.7s ease both; animation-delay: 0.2s;
+}
+.heroTitle {
+  font-size: clamp(2.2rem,5vw,3.8rem); font-weight: 900; color: #fff; line-height: 1.1;
+  margin-bottom: 1.25rem; white-space: pre-line;
+  animation: heroFadeUp 0.85s cubic-bezier(0.16,1,0.3,1) both; animation-delay: 0.4s;
+}
+.heroSubtitle {
+  font-size: clamp(1rem,1.8vw,1.18rem); line-height: 1.75; color: rgba(255,255,255,0.75); max-width: 620px;
+  animation: heroFadeUp 0.85s cubic-bezier(0.16,1,0.3,1) both; animation-delay: 0.6s;
+}
+
+/* ── 2. WHO WE ARE ───────────────────────────────────────── */
+.who { padding: 7rem 0; background: #fff; }
+.whoGrid { display: grid; grid-template-columns: 320px 1fr; gap: 5rem; }
+.whoLeft { position: sticky; top: 120px; align-self: start; }
+.whoRight { display: flex; flex-direction: column; gap: 0.25rem; }
+.whoPara {
+  font-size: 1.05rem; line-height: 1.85; color: var(--color-gray-500);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-gray-200);
+  margin-bottom: 1.25rem;
+}
+.whoPara:last-of-type { border-bottom: none; }
+
+/* ── 3. VISION & MISSION ────────────────────────────────── */
+.vmv { padding: 7rem 0 4rem; background: var(--color-gray-50); }
+
+/* ── 4. OUR VALUES ──────────────────────────────────────── */
+.valuesSection { padding: 4rem 0 7rem; background: var(--color-gray-50); }
+.vmCard {
+  border-radius: 16px; padding: 3rem 2.5rem;
+  transition: transform 0.25s, box-shadow 0.25s; height: 100%;
+}
+.vmCard:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
+.vmCardTeal  { background: var(--color-primary); color: #fff; }
+.vmCardDark  { background: #0d2826; color: #fff; }
+.vmIcon { font-size: 2rem; margin-bottom: 1.25rem; opacity: 0.7; }
+.vmLabel {
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--color-secondary); margin-bottom: 1rem;
+}
+.vmText { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.85); }
+
+/* Values */
+.valuesHeading {
+  font-size: 1.25rem; font-weight: 800; color: var(--color-dark);
+  margin-bottom: 1.5rem; letter-spacing: -0.01em;
+}
+.valuesGrid { display: flex; flex-direction: column; gap: 0.75rem; }
+.valueCard {
+  display: flex; gap: 1.25rem; align-items: flex-start;
+  background: #fff; border-radius: 10px; padding: 1.25rem 1.75rem;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04); border-left: 3px solid var(--color-secondary);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.valueCard:hover { transform: translateX(6px); box-shadow: 0 4px 20px rgba(197,160,89,0.12); }
+.valueDot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--color-secondary); margin-top: 7px; }
+.valueLabel { font-weight: 800; color: var(--color-dark); font-size: 1rem; }
+.valueSep   { color: var(--color-secondary); font-weight: 400; }
+.valueDesc  { color: var(--color-gray-500); font-size: 0.96rem; line-height: 1.6; }
+
+/* ── 4. LEADERSHIP ───────────────────────────────────────── */
+.leadership {
+  padding: 0 0 7rem;
+  background: linear-gradient(135deg, #0d2826 0%, #1a3d3b 50%, #0d2826 100%);
+}
+.leadershipIntro {
+  color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.8;
+  margin-top: 1.5rem; max-width: 740px; margin-left: auto; margin-right: auto;
+}
+
+/* ── 5. CTA ──────────────────────────────────────────────── */
+.cta { padding: 7rem 0; background: #fff; text-align: center; }
+.ctaInner { max-width: 660px; margin: 0 auto; }
+.ctaGoldLine { width:52px; height:3px; background:var(--color-secondary); border-radius:2px; margin:0 auto 2rem; }
+.ctaTitle { font-size: clamp(1.8rem,3.5vw,2.6rem); font-weight: 900; color: var(--color-dark); margin-bottom: 1rem; }
+.ctaText  { font-size: 1.1rem; color: var(--color-gray-500); line-height: 1.7; margin-bottom: 2.5rem; }
+.ctaActions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* Hub Styles */
+.aboutHubIntro {
+  color: var(--color-gray-500); font-size: 1.05rem; line-height: 1.8;
+  margin-top: 1.5rem; max-width: 740px; margin-left: auto; margin-right: auto;
+}
+
+.hubGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.hubCard {
+  text-decoration: none;
+  background: #fff;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--color-gray-200);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.hubCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-primary);
+  box-shadow: 0 15px 40px rgba(19,144,136,0.12);
+}
+
+.hubIcon {
+  width: 70px;
+  height: 70px;
+  background: rgba(19,144,136,0.1);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.hubCard:hover .hubIcon {
+  background: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.hubCardTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.hubCardDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-gray-500);
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.hubCardLink {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.hubCard:hover .hubCardLink {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 1024px) {
+  .hubGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .whoGrid      { grid-template-columns: 1fr; }
+  .whoLeft      { position: static; }
+  .vmGrid       { grid-template-columns: 1fr; }
+  .leaderDetails{ grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .leaderTop    { flex-direction: column; }
+}

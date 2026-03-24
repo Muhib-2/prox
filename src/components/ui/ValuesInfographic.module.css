@@ -1,0 +1,68 @@
+/* ============================================================
+   ValuesInfographic — Hub + SVG Arc + Arrow Cards
+   ============================================================ */
+
+@keyframes fadeSlideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+@keyframes dotPop { from { opacity: 0; r: 0; } to { opacity: 1; } }
+@keyframes lineDraw { from { stroke-dashoffset: 60; opacity: 0; } to { stroke-dashoffset: 0; opacity: 1; } }
+@keyframes arcDraw { from { stroke-dashoffset: 1200; } to { stroke-dashoffset: 0; } }
+@keyframes pulse { 0% { transform: translate(-50%,-50%) scale(1); opacity: 0.4; } 100% { transform: translate(-50%,-50%) scale(1.55); opacity: 0; } }
+
+.wrap { display: flex; align-items: center; gap: 2rem; max-width: 1040px; margin: 0 auto; min-height: 580px; }
+
+/* 1. Reduce circle size by 20% (190px -> 150px) */
+.hubWrap { position: relative; flex-shrink: 0; width: 150px; height: 150px; opacity: 0; transform: scale(0.85); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+.inView .hubWrap { opacity: 1; transform: scale(1); }
+.hubPulse, .hubPulse2 { position: absolute; top: 50%; left: 50%; border-radius: 50%; border: 1.5px solid rgba(19,144,136,0.35); pointer-events: none; }
+.hubPulse { width: 190px; height: 190px; transform: translate(-50%,-50%); }
+.hubPulse2 { width: 240px; height: 240px; transform: translate(-50%,-50%); opacity: 0.5; }
+.inView .hubPulse { animation: pulse 2.8s ease-out 0.4s infinite; }
+.inView .hubPulse2 { animation: pulse 2.8s ease-out 1.2s infinite; }
+.hub { position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, #139088 0%, #0d6b65 60%, #093d3a 100%); box-shadow: 0 12px 32px rgba(19,144,136,0.45), inset 0 1px 0 rgba(255,255,255,0.15); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.15rem; }
+.hubGlobe { font-size: 1.6rem; color: rgba(197,160,89,0.9); line-height: 1; margin-bottom: 0.2rem; }
+.hubBrand { font-size: 0.65rem; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+.hubLabel { font-size: 0.85rem; font-weight: 800; color: #fff; text-align: center; line-height: 1.2; }
+.hubDivider { width: 28px; height: 1.5px; background: rgba(197,160,89,0.5); border-radius: 1px; margin: 0.25rem 0; }
+.hubSub { font-size: 0.55rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+
+/* Straight Timeline SVG */
+.arc { flex-shrink: 0; width: 140px; height: 580px; overflow: visible; margin-right: -1rem; }
+.arcPath { stroke: rgba(19, 144, 136, 0.45); stroke-width: 2; stroke-dasharray: 600; stroke-dashoffset: 600; fill: none; }
+.inView .arcPath { animation: arcDraw 1.4s ease-out 0.35s forwards; }
+.arcDot { fill: #c5a059; opacity: 0; filter: drop-shadow(0 0 4px rgba(197,160,89,0.7)); }
+.inView .arcDot { animation: dotPop 0.4s ease forwards; }
+.arcConnector { stroke: rgba(197, 160, 89, 0.4); stroke-width: 1.5; stroke-dasharray: 100; stroke-dashoffset: 100; opacity: 0; }
+.inView .arcConnector { animation: lineDraw 0.4s ease forwards; }
+
+/* Consistent Card Spacing & Alignment */
+.cards { flex: 1; display: flex; flex-direction: column; justify-content: space-between; height: 550px; padding: 10px 0; max-width: 720px; width: 100%; }
+.cardRow { display: flex; align-items: center; gap: 1.5rem; opacity: 0; transform: translateX(40px); transition: none; }
+.inView .cardRow { animation: fadeSlideLeft 0.55s cubic-bezier(0.16,1,0.3,1) both; animation-delay: var(--delay); }
+
+.iconCircle { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: #fff; box-shadow: 0 4px 16px rgba(19,144,136,0.2); display: flex; align-items: center; justify-content: center; border: 2px solid rgba(19,144,136,0.25); transition: background 0.25s, border-color 0.25s; z-index: 1; }
+.cardRow:hover .iconCircle { background: var(--color-primary); border-color: var(--color-primary); }
+.iconGlyph { font-size: 1.1rem; color: #139088; transition: color 0.25s; }
+.cardRow:hover .iconGlyph { color: #fff; }
+
+/* 2. Remove diagonal cut, use clean rectangle */
+.card { flex: 1; position: relative; background: linear-gradient(110deg, #0d2826 0%, #143330 100%); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem 1.75rem; transition: background 0.25s, border-color 0.25s, transform 0.25s; }
+.cardRow:hover .card { background: linear-gradient(110deg, #1a4040 0%, #1e4a48 100%); border-color: rgba(197,160,89,0.25); transform: translateX(4px); }
+
+.cardNumBadge { position: absolute; top: 1px; right: 18px; background: #c5a059; color: #fff; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.06em; padding: 0.25rem 0.6rem; border-radius: 100px; line-height: 1; box-shadow: 0 4px 12px rgba(197,160,89,0.3); }
+.cardTitle { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.35rem; line-height: 1.3; }
+
+/* 3. Increase text contrast */
+.cardDesc { font-size: 0.85rem; color: rgba(255,255,255,0.9); line-height: 1.6; margin: 0; }
+
+/* 7. Mobile Responsiveness */
+@media (max-width: 900px) { 
+  .wrap { flex-direction: column; align-items: center; gap: 3rem; min-height: unset; padding: 1rem 0; } 
+  .hubWrap { margin: 0 auto; }
+  .arc { display: none; } 
+  .cards { width: 100%; height: auto; gap: 1.5rem; padding: 0 1rem; } 
+  .cardRow { opacity: 1 !important; transform: none !important; animation: none !important; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; } 
+  .iconCircle { position: relative; width: 44px; height: 44px; left: 0; align-self: flex-start; margin-bottom: -1.75rem; margin-left: 1rem; z-index: 5; }
+  .cardRow:hover .card { transform: translateY(-4px); }
+  .card { width: 100%; border-radius: 12px; padding: 2rem 1.5rem 1.25rem 1.5rem; } 
+  .cardNumBadge { right: 10px; top: -10px; position: absolute; }
+}

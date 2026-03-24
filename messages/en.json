@@ -1,0 +1,202 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "media": "Media",
+    "careers": "Careers",
+    "contact": "Contact Us",
+    "langText": "AR"
+  },
+  "footer": {
+    "tagline": "for Consulting and Business Development",
+    "whyProex": "WHY PROEX",
+    "services": "SERVICES",
+    "contact": "CONTACT US",
+    "copyright": "All rights reserved ProEx for Consulting and Business Development"
+  },
+  "home": {
+    "heroTitle": "Empowering Institutions.",
+    "heroHighlight": "Driving Sustainable Impact.",
+    "heroSubtitle": "We partner with government entities, private sector leaders, and civil society organizations to design and deliver transformative institutional solutions.",
+    "whoTitle": "Who We Are",
+    "whoText1": "At ProEx for Consulting and Business Development w.L.L, we believe that institutional excellence is not accidental — it is engineered.",
+    "whoText2": "Headquartered in the Kingdom of Bahrain with a regional outlook, ProEx delivers integrated advisory solutions across governance, strategy, capacity development, communication, and institutional transformation.",
+    "whoText3": "Through our structured and results-driven approach, we help organizations strengthen systems, enhance performance, and achieve measurable impact.",
+    "whoBtn": "Learn More",
+    "traceTitle": "Our Integrated Model – TRACE",
+    "traceSubtitle": "Our work is built around a comprehensive advisory framework that integrates five core capabilities:",
+    "traceBtn": "Discover Our Solutions",
+    "traceItems": [
+      { "letter": "T", "title": "Training", "description": "Strategic capacity development programs tailored for institutional excellence." },
+      { "letter": "R", "title": "Relationship Activities", "description": "Engineering strategic partnerships and stakeholder ecosystems." },
+      { "letter": "A", "title": "Assessment", "description": "Evidence-based institutional, policy, and performance evaluations." },
+      { "letter": "C", "title": "Communication Strategies", "description": "Designing impactful communication frameworks that influence behavior and build trust." },
+      { "letter": "E", "title": "Event Organization", "description": "Managing high-level institutional and national events with precision and strategic alignment." }
+    ],
+    "sectorsTitle": "Sectors We Serve",
+    "sectors": [
+      { "title": "Government Sector", "description": "Supporting governance reform, public policy design, institutional performance enhancement, and citizen-centric service transformation." },
+      { "title": "Private Sector", "description": "Driving competitiveness, leadership development, governance maturity, and sustainable growth strategies." },
+      { "title": "Civil Society", "description": "Strengthening institutional capacity, program effectiveness, sustainability, and community engagement." }
+    ],
+    "workTitle": "Selected Work",
+    "workText": "Our portfolio reflects measurable transformation across institutions and sectors. From governance frameworks and national initiatives to capacity development programs and strategic communication campaigns, we deliver solutions that translate strategy into impact.",
+    "workBtn": "View All Work",
+    "insightsTitle": "Insights & Thought Leadership",
+    "insightsText": "We contribute to institutional dialogue through policy insights, research briefs, and thought leadership articles that shape strategic decision-making.",
+    "insightsBtn": "Explore Insights",
+    "ctaTitle": "Let's Build Impact Together.",
+    "ctaText": "Partner with ProEx to design the future of your institution.",
+    "ctaBtn1": "Contact Us",
+    "ctaBtn2": "Why ProEx",
+    "ctaBtn3": "Our Releases"
+  },
+  "about": {
+    "heroTitle": "About ProEx",
+    "heroSubtitle": "A premier Saudi consulting firm bridging global expertise with deep local insight.",
+    "whyTitle": "Why ProEx?",
+    "whyText": "ProEx brings together a unique combination of international consulting methodologies and indigenous market knowledge. Our consultants are seasoned professionals who have delivered transformative results across the Gulf region and beyond.",
+    "teamTitle": "Saudi Consulting Team",
+    "teamText": "Our team is composed of Saudi professionals and regional experts with deep roots in the local business environment. We understand the cultural nuances, regulatory frameworks, and strategic priorities that shape business success in the Kingdom.",
+    "leadershipTitle": "Leadership Team",
+    "clientsTitle": "Trusted By Industry Leaders",
+    "values": [
+      { "title": "Integrity", "description": "Trust, transparency, and honesty in every client engagement." },
+      { "title": "Excellence", "description": "Uncompromising standards of quality in everything we deliver." },
+      { "title": "Innovation", "description": "Pioneering approaches that challenge convention and drive change." },
+      { "title": "Partnership", "description": "Long-term relationships built on mutual success and shared vision." }
+    ]
+  },
+  "services": {
+    "heroTitle": "Our Services",
+    "heroSubtitle": "At ProEx for Consulting and Business Development w.L.L, we deliver integrated consulting solutions designed to strengthen institutions, enhance governance, and enable sustainable impact.",
+    "introTitle": "Our Services",
+    "introText": "At ProEx for Consulting and Business Development w.L.L, we deliver integrated consulting solutions designed to strengthen institutions, enhance governance, and enable sustainable impact.\n\nOur services are structured around the TRACE model, an integrated framework that combines strategic analysis, capacity development, stakeholder engagement, communication strategy, and high-level event management.\n\nThrough this model, we support organizations in translating vision into execution and strategy into measurable results.",
+    "pillars": [
+      {
+        "letter": "T",
+        "title": "Training & Capacity Development",
+        "description": "We design and deliver high-impact training programs that strengthen institutional competencies and leadership capabilities. Our programs are tailored to organizational needs and aligned with strategic priorities, ensuring that knowledge translates into practical application and measurable improvement.",
+        "keyAreas": [
+          "Leadership and executive development",
+          "Governance and institutional management",
+          "Strategic planning and performance management",
+          "Public policy and institutional reform",
+          "Organizational culture and change management"
+        ]
+      },
+      {
+        "letter": "R",
+        "title": "Strategic Relationship Building",
+        "description": "Strong institutions rely on strong networks. We help organizations design and manage stakeholder ecosystems, strategic partnerships, and collaborative platforms that strengthen influence and expand impact.",
+        "keyAreas": [
+          "Stakeholder mapping and engagement strategies",
+          "Partnership development and alliance building",
+          "Institutional networking initiatives",
+          "Multi-sector collaboration platforms"
+        ]
+      },
+      {
+        "letter": "A",
+        "title": "Institutional Assessment",
+        "description": "Effective transformation begins with a clear understanding of current performance. We conduct comprehensive institutional assessments that evaluate governance frameworks, operational effectiveness, policy alignment, and organizational capacity. Our approach combines data analysis, stakeholder consultation, and international best practices to deliver actionable insights.",
+        "keyAreas": [
+          "Institutional performance evaluation",
+          "Governance and compliance reviews",
+          "Policy and program evaluation",
+          "Organizational diagnostics"
+        ]
+      },
+      {
+        "letter": "C",
+        "title": "Strategic Communication",
+        "description": "Communication is a powerful driver of institutional influence and public trust. We design integrated communication strategies that align messaging with institutional objectives and stakeholder expectations.",
+        "keyAreas": [
+          "Communication strategy design",
+          "Public awareness campaigns",
+          "Media engagement frameworks",
+          "Institutional branding and messaging"
+        ]
+      },
+      {
+        "letter": "E",
+        "title": "Strategic Event Management",
+        "description": "We design and manage high-level conferences, institutional forums, and national initiatives that facilitate dialogue, collaboration, and knowledge exchange. Our approach ensures that events are not merely gatherings, but strategic platforms that support institutional objectives and policy dialogue.",
+        "keyAreas": [
+          "Conference and summit organization",
+          "Institutional forums and policy dialogues",
+          "Training workshops and knowledge events",
+          "End-to-end event management"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "heroTitle": "Media & News",
+    "heroSubtitle": "Insights, updates and thought leadership from the ProEx team.",
+    "featuredLabel": "Featured Article",
+    "featuredTitle": "Saudi Vision 2030: The Consulting Opportunity of a Decade",
+    "featuredExcerpt": "As the Kingdom of Saudi Arabia accelerates its ambitious diversification agenda, the demand for strategic consulting expertise has never been greater. ProEx examines the opportunity landscape and where consulting firms can add the most value.",
+    "featuredBtn": "Read Full Article",
+    "latestTitle": "Latest Updates",
+    "articles": [
+      { "title": "The Future of Corporate Governance in the GCC", "description": "How regional enterprises are upgrading board structures and audit frameworks to meet new international standards." },
+      { "title": "Human Capital at the Heart of Transformation", "description": "Why people strategy is the single greatest lever for sustainable business transformation in rapidly evolving markets." },
+      { "title": "Digital Maturity: Where Saudi Enterprises Stand Today", "description": "A ProEx benchmarking report assessing digital readiness across key sectors including financial services, healthcare, and retail." }
+    ]
+  },
+  "careers": {
+    "heroTitle": "Careers at ProEx",
+    "heroSubtitle": "At ProEx for Consulting and Business Development w.L.L, we are always looking for talented professionals who are passionate about institutional development, governance, and strategic consulting.",
+    "heroIntro": "We believe that our people are our greatest asset, and we are committed to building a collaborative environment where ideas thrive and expertise grows.",
+    "lifeTitle": "Life at ProEx",
+    "lifeText1": "Working at ProEx means being part of a dynamic and collaborative environment that encourages creativity, analytical thinking, and innovation.",
+    "lifeText2": "Our teams work on impactful projects that contribute to institutional development and sustainable growth across sectors.",
+    "engagementTitle": "Engagement",
+    "engagementText1": "Our consultants and professionals engage closely with clients to design practical solutions and implement strategic initiatives.",
+    "engagementText2": "Working at ProEx provides exposure to diverse sectors and complex institutional challenges.",
+    "upskillTitle": "Upskilling & Growth",
+    "upskillIntro": "We invest in the continuous development of our team members through:",
+    "upskillItems": [
+      "Professional learning opportunities",
+      "Exposure to diverse consulting assignments",
+      "Knowledge sharing and mentorship",
+      "Participation in regional and international initiatives"
+    ],
+    "opportunitiesTitle": "Job Opportunities",
+    "opportunitiesText": "Open positions will be listed here as they become available.",
+    "opportunitiesEmail": "If you are interested in joining ProEx, please send your CV to:",
+    "careersEmail": "careers@proexconsulting.com",
+    "positions": []
+  },
+  "contact": {
+    "heroTitle": "Contact Us",
+    "heroSubtitle": "Connect with our strategic advisors to discuss how we can accelerate your enterprise growth.",
+    "getInTouchTitle": "Get in Touch",
+    "getInTouchText": "Whether you have a strategic inquiry or want to explore partnership opportunities, our team is ready to assist you.",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "hoursLabel": "Working Hours",
+    "hours": "Sunday - Thursday: 9:00 AM - 6:00 PM",
+    "hqTitle": "Our Headquarters",
+    "hqOffice": "Riyadh Office",
+    "hqAddress": "123 Business District, King Fahd Road, Office 400, Riyadh 12211, Saudi Arabia",
+    "formTitle": "Send a Message",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Doe",
+    "emailFormLabel": "Email Address",
+    "emailPlaceholder": "john@company.com",
+    "phoneFormLabel": "Phone Number",
+    "phonePlaceholder": "+966 5X XXX XXXX",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Your Organization",
+    "serviceLabel": "Service of Interest",
+    "servicePlaceholder": "Select a service...",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "submitBtn": "Send Message",
+    "mapTitle": "Interactive Map Area",
+    "mapSubtitle": "ProEx Riyadh Headquarters"
+  }
+}

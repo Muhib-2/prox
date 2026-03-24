@@ -1,0 +1,223 @@
+import Link from 'next/link';
+import styles from './page.module.css';
+import { getTranslations } from '../../lib/i18n';
+import ScrollReveal from '../../components/ui/ScrollReveal';
+
+// ── Sector icons ────────────────────────────────────────────
+const GovIcon  = () => <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>;
+const PrivIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>;
+const CivIcon  = () => <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>;
+const sectorIcons = [GovIcon, PrivIcon, CivIcon];
+
+export default function Home({ params: { locale } }) {
+  const t = getTranslations(locale);
+  const h = t.home;
+
+  return (
+    <div className={styles.home}>
+
+      {/* ── 1. HERO ─────────────────────────────────────────────
+          Hero has its own built-in CSS entrance animation (no ScrollReveal needed) */}
+      <section className={styles.hero}>
+        <div className={styles.heroOverlay} />
+        <div className={`container ${styles.heroInner}`}>
+          <div className={styles.heroLabel}>ProEx Advisory</div>
+          <h1 className={styles.heroTitle}>
+            {h.heroTitle}<br />
+            <span className={styles.heroHighlight}>{h.heroHighlight}</span>
+          </h1>
+          <p className={styles.heroSubtitle}>{h.heroSubtitle}</p>
+          <div className={styles.heroActions}>
+            <Link href={`/${locale}/contact`} className={styles.heroBtnPrimary}>Contact Us</Link>
+            <Link href={`/${locale}/who-we-are`}   className={styles.heroBtnOutline}>Who We Are</Link>
+          </div>
+        </div>
+        <div className={styles.heroBar} />
+      </section>
+
+      {/* ── 2. WHO WE ARE ────────────────────────────────────── */}
+      <section className={styles.who}>
+        <div className="container">
+          <div className={styles.whoGrid}>
+
+            {/* Left — slides in from left */}
+            <ScrollReveal animation="fadeLeft" threshold={0.2}>
+              <span className={styles.chipTeal}>About Us</span>
+              <h2 className={styles.sectionTitle}>{h.whoTitle}</h2>
+              <div className={styles.goldBar} />
+            </ScrollReveal>
+
+            {/* Right — slides up with slight delay */}
+            <div className={styles.whoRight}>
+              <ScrollReveal animation="fadeUp" delay="0.1s">
+                <p className={styles.whoPara}>{h.whoText1}</p>
+              </ScrollReveal>
+              <ScrollReveal animation="fadeUp" delay="0.22s">
+                <p className={styles.whoPara}>{h.whoText2}</p>
+              </ScrollReveal>
+              <ScrollReveal animation="fadeUp" delay="0.34s">
+                <p className={styles.whoPara}>{h.whoText3}</p>
+              </ScrollReveal>
+              <ScrollReveal animation="fadeUp" delay="0.46s">
+                <Link href={`/${locale}/who-we-are`} className={styles.btnPrimary}>{h.whoBtn}</Link>
+              </ScrollReveal>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. TRACE MODEL ───────────────────────────────────── */}
+      <section className={styles.trace}>
+        <div className="container">
+
+          <ScrollReveal animation="fadeUp">
+            <div className={styles.sectionHeader}>
+              <span className={styles.chipGold}>Our Framework</span>
+              <h2 className={styles.sectionTitleWhite}>{h.traceTitle}</h2>
+              <p className={styles.sectionSubWhite}>{h.traceSubtitle}</p>
+            </div>
+          </ScrollReveal>
+
+          <div className={styles.traceGrid}>
+            {h.traceItems.map((item, idx) => (
+              <ScrollReveal
+                key={item.letter}
+                animation="fadeRight"
+                delay={`${idx * 0.12}s`}
+                threshold={0.1}
+              >
+                <div className={styles.traceCard}>
+                  <div className={styles.traceLetter}>{item.letter}</div>
+                  <div className={styles.traceBody}>
+                    <div className={styles.traceLabel}>ProEx – {item.letter}</div>
+                    <h3 className={styles.traceTitle}>{item.title}</h3>
+                    <p className={styles.traceDesc}>{item.description}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal animation="fadeUp" delay="0.3s">
+            <div className={styles.centerAction}>
+              <Link href={`/${locale}/services`} className={styles.btnGold}>{h.traceBtn}</Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── 4. SECTORS ───────────────────────────────────────── */}
+      <section className={styles.sectors}>
+        <div className="container">
+
+          <ScrollReveal animation="fadeUp">
+            <div className={styles.sectionHeader}>
+              <span className={styles.chipTeal}>Who We Work With</span>
+              <h2 className={styles.sectionTitle}>{h.sectorsTitle}</h2>
+              <div className={styles.goldBarCenter} />
+            </div>
+          </ScrollReveal>
+
+          <div className={styles.sectorGrid}>
+            {h.sectors.map((sector, idx) => {
+              const Icon = sectorIcons[idx];
+              return (
+                <ScrollReveal
+                  key={idx}
+                  animation="scaleUp"
+                  delay={`${idx * 0.15}s`}
+                  threshold={0.1}
+                >
+                  <div className={styles.sectorCard}>
+                    <div className={styles.sectorIcon}><Icon /></div>
+                    <h3 className={styles.sectorTitle}>{sector.title}</h3>
+                    <p className={styles.sectorDesc}>{sector.description}</p>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. SELECTED WORK ─────────────────────────────────── */}
+      <section className={styles.work}>
+        <div className="container">
+          <div className={styles.workInner}>
+
+            {/* Left text — slide from left */}
+            <ScrollReveal animation="fadeLeft" threshold={0.15}>
+              <span className={styles.chipGold}>Portfolio</span>
+              <h2 className={styles.sectionTitleWhite}>{h.workTitle}</h2>
+              <div className={styles.workGoldBar} />
+              <p className={styles.workDesc}>{h.workText}</p>
+              <Link href={`/${locale}/media`} className={styles.btnGold}>{h.workBtn}</Link>
+            </ScrollReveal>
+
+            {/* Right stats — slide from right */}
+            <ScrollReveal animation="fadeRight" delay="0.15s" threshold={0.15}>
+              <div className={styles.statPanel}>
+                {[
+                  { num: '50+', label: 'Institutions Served' },
+                  { num: '12+', label: 'Years of Impact' },
+                  { num: '5',   label: 'Core Capabilities' },
+                  { num: '3',   label: 'Sectors We Serve' },
+                ].map((s, i) => (
+                  <div key={i}>
+                    <div className={styles.statItem}>
+                      <span className={styles.statNum}>{s.num}</span>
+                      <span className={styles.statLabel}>{s.label}</span>
+                    </div>
+                    {i < 3 && <div className={styles.statDivider} />}
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. INSIGHTS ──────────────────────────────────────── */}
+      <section className={styles.insights}>
+        <div className="container">
+          <div className={styles.insightsInner}>
+
+            {/* Text — fade up */}
+            <ScrollReveal animation="fadeUp" threshold={0.15}>
+              <span className={styles.chipTeal}>Knowledge Hub</span>
+              <h2 className={styles.sectionTitle}>{h.insightsTitle}</h2>
+              <p className={styles.insightsDesc}>{h.insightsText}</p>
+              <Link href={`/${locale}/media`} className={styles.btnPrimary}>{h.insightsBtn}</Link>
+            </ScrollReveal>
+
+            {/* Badges — staggered from right */}
+            <div className={styles.insightsDeco}>
+              {[
+                { icon: '✦', label: 'Policy\nInsights' },
+                { icon: '◈', label: 'Research\nBriefs', alt: true },
+                { icon: '◉', label: 'Thought\nLeadership' },
+              ].map((b, i) => (
+                <ScrollReveal key={i} animation="fadeLeft" delay={`${i * 0.15}s`} threshold={0.1}>
+                  <div className={`${styles.insightsBadge} ${b.alt ? styles.insightsBadgeAlt : ''}`}>
+                    <div className={styles.insightsBadgeIcon}>{b.icon}</div>
+                    <div className={styles.insightsBadgeText}>
+                      {b.label.split('\n').map((line, j) => (
+                        <span key={j}>{line}{j === 0 && <br />}</span>
+                      ))}
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+    </div>
+  );
+}
