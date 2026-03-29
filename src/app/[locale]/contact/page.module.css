@@ -9,11 +9,48 @@
   height: 540px;
   overflow: hidden;
   background-color: #102e2e;
-  background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=2000&q=80');
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
+}
+
+.mapLinkArea {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mapImage {
+  position: absolute;
+  inset: -5%;
+  width: 110%;
+  height: 110%;
+  background-image: url('/bahrain-map-bg.png');
+  background-size: cover;
+  background-position: center;
+  animation: slowPan 30s ease-in-out infinite alternate;
+  transition: transform 0.08s linear, opacity 0.3s ease;
+}
+
+.mapSpotlight {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: transparent;
+  transition: background 0.05s linear;
+}
+
+.mapLinkArea:hover .mapImage {
+  opacity: 0.85;
+}
+
+@keyframes slowPan {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-2.5%, -2.5%) scale(1.05); }
+  100% { transform: translate(1.5%, 2%) scale(1.02); }
 }
 
 .mapOverlay {
@@ -29,15 +66,58 @@
 
 .mapMarker {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
   color: #c5a059;
-  filter: drop-shadow(0 2px 8px rgba(197,160,89,0.3));
-  animation: pinBounce 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(197,160,89,0.6));
+  z-index: 5;
+  pointer-events: none;
+  animation: pinBounce 2s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapMarker::before,
+.mapMarker::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  background-color: rgba(197, 160, 89, 0.5);
+  border-radius: 50%;
+  z-index: -1;
+  animation: ripplePulse 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.mapMarker::after {
+  animation-delay: 1.25s;
+}
+
+@keyframes ripplePulse {
+  0%   { width: 28px; height: 28px; opacity: 1; }
+  100% { width: 90px; height: 90px; opacity: 0; }
 }
 
 @keyframes pinBounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-6px); }
+  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
+  50%       { transform: translate(-50%, -100%) translateY(-8px); }
 }
+
+.mapSpotlight {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: transparent;
+  transition: background 0.05s linear;
+}
+
+
 
 .mapInner {
   position: relative;
@@ -46,6 +126,7 @@
   grid-template-columns: 1fr 400px;
   gap: 2rem;
   width: 100%;
+  pointer-events: none;
 }
 
 .officeTextList {
@@ -53,6 +134,7 @@
   flex-direction: column;
   gap: 2.5rem;
   padding-right: 2rem; /* Add some padding so it doesn't hug the edge */
+  pointer-events: auto;
 }
 
 .officeTextItem {

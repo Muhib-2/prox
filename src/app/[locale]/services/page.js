@@ -24,7 +24,7 @@ export default function Services({ params: { locale } }) {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroChip}>
-            {locale === 'ar' ? 'خدماتنا' : 'Our Services'}
+            {s.servicesChip}
           </div>
           <h1 className={styles.heroTitle}>{s.heroTitle}</h1>
           <p className={styles.heroSubtitle}>{s.heroSubtitle}</p>
@@ -38,7 +38,7 @@ export default function Services({ params: { locale } }) {
           <ScrollReveal animation="fadeUp">
             <div className={styles.introInner}>
               <span className={styles.chipTeal}>
-                {locale === 'ar' ? 'نهجنا' : 'The TRACE Model'}
+                {s.traceChip}
               </span>
               <h2 className={styles.sectionTitle}>{s.introTitle}</h2>
               <div className={styles.goldBarCenter} />

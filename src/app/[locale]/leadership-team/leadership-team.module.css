@@ -13,7 +13,7 @@
 .heroContent {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
   position: relative;
   z-index: 5;
@@ -25,7 +25,7 @@
 }
 
 .heroHeader {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .brandName {

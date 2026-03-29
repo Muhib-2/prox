@@ -2,7 +2,11 @@
   "nav": {
     "home": "Home",
     "about": "About",
+    "whoWeAre": "Who We Are",
+    "ourClients": "Our Clients",
+    "leadershipTeam": "Leadership & Team",
     "services": "Services",
+    "ourWork": "Our Work",
     "media": "Media",
     "careers": "Careers",
     "contact": "Contact Us",
@@ -130,7 +134,9 @@
           "End-to-end event management"
         ]
       }
-    ]
+    ],
+    "traceChip": "The TRACE Model",
+    "servicesChip": "Our Services"
   },
   "media": {
     "heroTitle": "Media & News",
@@ -140,6 +146,14 @@
     "featuredExcerpt": "As the Kingdom of Saudi Arabia accelerates its ambitious diversification agenda, the demand for strategic consulting expertise has never been greater. ProEx examines the opportunity landscape and where consulting firms can add the most value.",
     "featuredBtn": "Read Full Article",
     "latestTitle": "Latest Updates",
+    "mediaChip": "Media & Knowledge",
+    "latestArticlesChip": "Latest Articles",
+    "readMore": "Read More",
+    "insightsLabel": "ProEx Insights",
+    "newsletterTitle": "Stay in the Know",
+    "newsletterSub": "Subscribe to our monthly thought leadership newsletter.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterBtn": "Subscribe",
     "articles": [
       { "title": "The Future of Corporate Governance in the GCC", "description": "How regional enterprises are upgrading board structures and audit frameworks to meet new international standards." },
       { "title": "Human Capital at the Heart of Transformation", "description": "Why people strategy is the single greatest lever for sustainable business transformation in rapidly evolving markets." },
@@ -198,5 +212,66 @@
     "submitBtn": "Send Message",
     "mapTitle": "Interactive Map Area",
     "mapSubtitle": "ProEx Riyadh Headquarters"
+  },
+  "ourWork": {
+    "chip": "Selected Projects",
+    "heroTitle": "Our Work",
+    "heroSubtitle": "At ProEx for Consulting and Business Development w.L.L, our work focuses on delivering practical solutions that generate measurable institutional impact. Our projects span government institutions, private sector organizations, and civil society initiatives.",
+    "introTitle": "Selected Projects",
+    "introText": "Our projects reflect our commitment to strengthening governance, building institutional capacity, and enabling sustainable development across the region.",
+    "projects": [
+      {
+        "id": "legal-clinic-sop",
+        "title": "Development of Standard Operating Procedures (SOPs) for Legal Clinic Project",
+        "paragraphs": [
+          "ProEx contributed to the launch of the Legal Clinic Project implemented by BASS Foundation on December 14, 2025, acting as the consulting partner responsible for developing the project’s Standard Operating Procedures (SOPs).",
+          "The engagement focused on designing structured operational frameworks to ensure efficiency, consistency, and quality in service delivery. Through this work, ProEx supported the institutionalization of legal aid services and strengthened the operational readiness of the initiative."
+        ]
+      },
+      {
+        "id": "pmp-training",
+        "title": "Professional Project Management (PMP) Training Program",
+        "paragraphs": [
+          "ProEx delivered a specialized PMP training program for employees of Silah Development Foundation, totaling 35 training hours through a blended learning approach (in-person and online).",
+          "The program was based on PMBOK guidelines and PMI methodologies, including Agile, Predictive, and Hybrid frameworks. This initiative aimed to enhance project management capabilities and equip participants with globally recognized practices to improve project delivery and organizational performance."
+        ]
+      },
+      {
+        "id": "mawaddah-rahmah-conference",
+        "title": "Strategic Event Management – Mawaddah & Rahmah Conference",
+        "paragraphs": [
+          "ProEx played a key role in organizing the “Mawaddah & Rahmah” Conference held in Bahrain on November 1, 2025.",
+          "The company delivered a professional end-to-end event management experience, ensuring high-quality organization and execution. In recognition of this contribution, ProEx was honored by Mustaqrah for its role in delivering a distinguished institutional event."
+        ]
+      },
+      {
+        "id": "gulf-university-sustainability",
+        "title": "Participation in Gulf University Sustainability Week 2025",
+        "paragraphs": [
+          "Represented by its CEO, Dr. Khaled Al-Azab, ProEx participated in Gulf University Sustainability Week 2025, presenting a paper on sustainable governance and its role in promoting peace, justice, and strong institutions.",
+          "This participation aligns with ProEx’s role as an advisory partner to the Bahrain Human Rights Observatory. The engagement concluded with formal recognition from the university."
+        ]
+      }
+    ],
+    "who": {
+      "paragraphs": [
+        "At ProEx for Consulting and Business Development w.L.L, we are strategic partners for institutions seeking transformation, sustainability, and institutional excellence.",
+        "Founded in the Kingdom of Bahrain with a regional outlook, ProEx was established to bridge the gap between strategy and execution — ensuring that institutional objectives are translated into measurable outcomes.",
+        "We combine rigorous analysis, practical implementation, and sustainable impact frameworks, enabling organizations to navigate complexity with confidence and clarity.",
+        "We pride ourselves in our capacity to work across sectors — government, private, and civil society — delivering context-aware solutions that drive performance, enhance governance, and strengthen stakeholder ecosystems."
+      ]
+    },
+    "clients": {
+      "chip": "Our Clients",
+      "heroTitle": "Success Partners",
+      "heroSubtitle": "We take pride in partnering with leading institutions that share our vision for driving institutional excellence and sustainable impact across various sectors.",
+      "names": [
+        "BASS Foundation",
+        "Silah Development Foundation",
+        "Mustaqrah",
+        "Gulf University",
+        "Bahrain Human Rights Observatory"
+      ]
+    }
   }
 }

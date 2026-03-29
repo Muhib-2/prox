@@ -41,7 +41,7 @@ export default function Careers({ params: { locale } }) {
       </section>
 
       {/* ── Tab Bar (sticky under header) ────────────────────── */}
-      <TabBar />
+      <TabBar c={c} />
 
       {/* ── Tab Sections (Client) ────────────────────────────── */}
       <CareersClient c={c} />

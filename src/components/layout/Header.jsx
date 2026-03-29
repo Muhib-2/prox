@@ -55,11 +55,12 @@ export default function Header({ locale, nav }) {
       label: nav.about,
       dropdown: [
         { href: `/${locale}/who-we-are`, label: nav.whoWeAre },
-        { href: `/${locale}/vision-mission-values`, label: nav.visionMissionValues },
         { href: `/${locale}/leadership-team`, label: nav.leadershipTeam },
+        { href: `/${locale}/our-clients`, label: nav.ourClients },
       ]
     },
     { href: `/${locale}/services`, label: nav.services },
+    { href: `/${locale}/our-work`,  label: nav.ourWork },
     { href: `/${locale}/media`,    label: nav.media },
     { href: `/${locale}/careers`,  label: nav.careers },
     { href: `/${locale}/contact`,  label: nav.contact },

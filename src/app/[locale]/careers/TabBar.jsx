@@ -4,20 +4,20 @@ import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import styles from './page.module.css';
 
-const TABS = [
-  { id: 'life',       label: 'Life at ProEx' },
-  { id: 'engagement', label: 'Engagement' },
-  { id: 'upskilling', label: 'Upskilling & Growth' },
-  { id: 'jobs',       label: 'Job Opportunities' },
-];
-
 const NAV_H = 75; // exact height of the sticky header
 const BAR_H = 54;
 
-export default function TabBar() {
+export default function TabBar({ c }) {
   const [activeTab, setActiveTab] = useState('life');
   const router = useRouter();
   const pathname = usePathname();
+
+  const TABS = [
+    { id: 'life',       label: c?.lifeTitle || 'Life at ProEx' },
+    { id: 'engagement', label: c?.engagementTitle || 'Engagement' },
+    { id: 'upskilling', label: c?.upskillTitle || 'Upskilling & Growth' },
+    { id: 'jobs',       label: c?.opportunitiesTitle || 'Job Opportunities' },
+  ];
 
   /* ── Highlight active section ────────────────────────────── */
   useEffect(() => {

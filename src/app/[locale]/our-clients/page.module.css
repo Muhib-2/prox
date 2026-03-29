@@ -1,0 +1,159 @@
+/* ─────────────────────────────────────────────────────────
+   OUR CLIENTS PAGE
+   ───────────────────────────────────────────────────────── */
+
+.page {
+  background: #0a1f1e;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* ── HERO ──────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: 10rem 0 6rem;
+  background-color: #0d2929;
+  background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,31,30,0.95) 0%, rgba(10,31,30,0.85) 100%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chipGold {
+  display: inline-block;
+  background: rgba(197,160,89,0.15);
+  border: 1px solid rgba(197,160,89,0.35);
+  color: #c5a059;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 950;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.goldBarCenter {
+  width: 60px;
+  height: 4px;
+  background: #c5a059;
+  margin: 0 auto 2.5rem;
+  border-radius: 4px;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+/* ── CLIENTS GRID ──────────────────────────────────────── */
+.clientsSection {
+  padding: 6rem 0 10rem;
+  background: #0a1f1e;
+}
+
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.clientCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.clientCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #c5a059;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.clientCard:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(197, 160, 89, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.clientCard:hover::after {
+  transform: scaleX(1);
+}
+
+.clientName {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+}
+
+.clientLogoPlaceholder {
+  width: 60px;
+  height: 60px;
+  background: rgba(197, 160, 89, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #c5a059;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.clientCard:hover .clientLogoPlaceholder {
+  background: #c5a059;
+  color: #fff;
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero { padding: 8rem 0 4rem; }
+  .clientsSection { padding: 4rem 0 6rem; }
+  .clientCard { padding: 2.5rem 1.5rem; }
+}

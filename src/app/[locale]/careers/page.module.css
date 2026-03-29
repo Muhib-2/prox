@@ -129,10 +129,10 @@
 .tabBtnActive { color: var(--color-primary); }
 /* Last tab: boxed outline button style */
 .tabBtnLast {
-  padding: 0.4rem 1.1rem;
+  padding: 0.8rem 1.6rem;
   margin: auto 0;
-  border: 1.5px solid var(--color-dark);
-  border-radius: 4px;
+  border: 1px solid var(--color-dark);
+  border-radius: 2px;
   color: var(--color-dark);
 }
 .tabBtnLast.tabBtnActive {

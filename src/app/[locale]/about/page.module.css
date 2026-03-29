@@ -91,7 +91,7 @@
 }
 
 /* ── 2. WHO WE ARE ───────────────────────────────────────── */
-.who { padding: 7rem 0; background: #fff; }
+.who { padding: 7rem 0 4rem; background: #fff; }
 .whoGrid { display: grid; grid-template-columns: 320px 1fr; gap: 5rem; }
 .whoLeft { position: sticky; top: 120px; align-self: start; }
 .whoRight { display: flex; flex-direction: column; gap: 0.25rem; }
@@ -104,7 +104,7 @@
 .whoPara:last-of-type { border-bottom: none; }
 
 /* ── 3. VISION & MISSION ────────────────────────────────── */
-.vmv { padding: 7rem 0 4rem; background: var(--color-gray-50); }
+.vmv { padding: 4rem 0; background: var(--color-gray-50); }
 
 /* ── 4. OUR VALUES ──────────────────────────────────────── */
 .valuesSection { padding: 4rem 0 7rem; background: var(--color-gray-50); }

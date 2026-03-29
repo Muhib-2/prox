@@ -152,7 +152,7 @@ export default function Home({ params: { locale } }) {
               <h2 className={styles.sectionTitleWhite}>{h.workTitle}</h2>
               <div className={styles.workGoldBar} />
               <p className={styles.workDesc}>{h.workText}</p>
-              <Link href={`/${locale}/media`} className={styles.btnGold}>{h.workBtn}</Link>
+              <Link href={`/${locale}/our-work`} className={styles.btnGold}>{h.workBtn}</Link>
             </ScrollReveal>
 
             {/* Right stats — slide from right */}
