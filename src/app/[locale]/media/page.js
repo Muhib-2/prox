@@ -18,7 +18,6 @@ const ArrowIcon = () => (
 export default function Media({ params: { locale } }) {
   const t = getTranslations(locale);
   const m = t.media;
-  const readMore = locale === 'ar' ? 'اقرأ المزيد' : 'Read More';
 
   return (
     <div className={styles.page}>
@@ -28,7 +27,7 @@ export default function Media({ params: { locale } }) {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroChip}>
-            {locale === 'ar' ? 'الإعلام والمعرفة' : 'Media & Knowledge'}
+            {m.mediaChip}
           </div>
           <h1 className={styles.heroTitle}>{m.heroTitle}</h1>
           <p className={styles.heroSubtitle}>{m.heroSubtitle}</p>
@@ -72,7 +71,7 @@ export default function Media({ params: { locale } }) {
           <ScrollReveal animation="fadeUp">
             <div className={styles.sectionHeader}>
               <span className={styles.chipTeal}>
-                {locale === 'ar' ? 'أحدث المقالات' : 'Latest Articles'}
+                {m.latestArticlesChip}
               </span>
               <h2 className={styles.sectionTitle}>{m.latestTitle}</h2>
               <div className={styles.goldBarCenter} />
@@ -94,12 +93,12 @@ export default function Media({ params: { locale } }) {
                   <div className={styles.articleContent}>
                     <div className={styles.articleMeta}>
                       <span className={styles.metaDot} />
-                      {locale === 'ar' ? 'رؤى بروإكس' : 'ProEx Insights'}
+                      {m.insightsLabel}
                     </div>
                     <h3 className={styles.articleTitle}>{article.title}</h3>
                     <p className={styles.articleDesc}>{article.description}</p>
                     <div className={styles.articleReadMore}>
-                      {readMore} <ArrowIcon />
+                      {m.readMore} <ArrowIcon />
                     </div>
                   </div>
                 </Link>
@@ -116,22 +115,20 @@ export default function Media({ params: { locale } }) {
             <div className={styles.newsletterInner}>
               <div className={styles.newsletterText}>
                 <h3 className={styles.newsletterTitle}>
-                  {locale === 'ar' ? 'ابقَ على اطلاع دائم' : 'Stay in the Know'}
+                  {m.newsletterTitle}
                 </h3>
                 <p className={styles.newsletterSub}>
-                  {locale === 'ar'
-                    ? 'اشترك في نشرتنا الفكرية الشهرية.'
-                    : 'Subscribe to our monthly thought leadership newsletter.'}
+                  {m.newsletterSub}
                 </p>
               </div>
               <div className={styles.newsletterForm}>
                 <input
                   type="email"
-                  placeholder={locale === 'ar' ? 'بريدك الإلكتروني' : 'Your email address'}
+                  placeholder={m.newsletterPlaceholder}
                   className={styles.newsletterInput}
                 />
                 <button className={styles.newsletterBtn}>
-                  {locale === 'ar' ? 'اشترك' : 'Subscribe'}
+                  {m.newsletterBtn}
                 </button>
               </div>
             </div>

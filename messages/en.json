@@ -181,6 +181,11 @@
     "opportunitiesTitle": "Job Opportunities",
     "opportunitiesText": "Open positions will be listed here as they become available.",
     "opportunitiesEmail": "If you are interested in joining ProEx, please send your CV to:",
+    "heroSub": "Join our team, and embark on a journey of",
+    "heroHighlight1": "growth",
+    "heroHighlight2": "opportunities",
+    "heroAnd": "and",
+    "scrollDown": "Scroll down",
     "careersEmail": "careers@proexconsulting.com",
     "positions": []
   },
@@ -254,6 +259,11 @@
       }
     ],
     "who": {
+      "heroTitle": "Strategic Partners for Institutional Transformation",
+      "heroSubtitle": "Combining rigorous analysis, practical implementation, and sustainable impact frameworks.",
+      "sectionTitle": "Who We Are",
+      "visionMissionTitle": "Vision & Mission",
+      "ourValuesTitle": "Our Values",
       "paragraphs": [
         "At ProEx for Consulting and Business Development w.L.L, we are strategic partners for institutions seeking transformation, sustainability, and institutional excellence.",
         "Founded in the Kingdom of Bahrain with a regional outlook, ProEx was established to bridge the gap between strategy and execution — ensuring that institutional objectives are translated into measurable outcomes.",

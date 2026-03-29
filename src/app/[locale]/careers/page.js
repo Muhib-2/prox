@@ -17,15 +17,13 @@ export default function Careers({ params: { locale } }) {
         <div className={`container ${styles.heroInner}`}>
           <h1 className={styles.heroTitle}>{c.heroTitle}</h1>
           <p className={styles.heroSubtitle}>
-            {isAr
-              ? 'انضم إلى فريقنا وكن جزءاً من رحلة'
-              : 'Join our team, and embark on a journey of'}{' '}
+            {c.heroSub}{' '}
             <span className={styles.heroHighlight}>
-              {isAr ? 'النمو' : 'growth'}
+              {c.heroHighlight1}
             </span>{' '}
-            {isAr ? 'و' : 'and'}{' '}
+            {c.heroAnd}{' '}
             <span className={styles.heroHighlight}>
-              {isAr ? 'الفرص' : 'opportunities'}
+              {c.heroHighlight2}
             </span>
           </p>
           <a href="#tab-life" className={styles.scrollDown}>
@@ -34,7 +32,7 @@ export default function Careers({ params: { locale } }) {
                 <circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/>
               </svg>
             </span>
-            <span>{isAr ? 'انتقل للأسفل' : 'Scroll down'}</span>
+            <span>{c.scrollDown}</span>
           </a>
         </div>
         <div className={styles.heroBar} />

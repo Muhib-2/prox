@@ -19,12 +19,10 @@ export default function WhoWeAre({ params: { locale } }) {
         <div className={`container ${styles.heroInner}`}>
 
           <h1 className={styles.heroTitle}>
-            {isAr ? 'شركاء استراتيجيون للتحول المؤسسي' : 'Strategic Partners for\nInstitutional Transformation'}
+            {w.heroTitle}
           </h1>
           <p className={styles.heroSubtitle}>
-            {isAr
-              ? 'نجمع بين التحليل الدقيق والتنفيذ العملي وأطر الأثر المستدام.'
-              : 'Combining rigorous analysis, practical implementation, and sustainable impact frameworks.'}
+            {w.heroSubtitle}
           </p>
         </div>
         <div className={styles.heroBar} />
@@ -38,7 +36,7 @@ export default function WhoWeAre({ params: { locale } }) {
               <div className={styles.whoLeft}>
 
                 <h2 className={styles.sectionTitle}>
-                  {isAr ? 'من نحن' : 'Who We Are'}
+                  {w.sectionTitle}
                 </h2>
                 <div className={styles.goldBar} />
               </div>
@@ -62,7 +60,7 @@ export default function WhoWeAre({ params: { locale } }) {
             <div className={styles.centerHeader}>
 
               <h2 className={styles.sectionTitle}>
-                {isAr ? 'الرؤية والرسالة' : 'Vision & Mission'}
+                {w.visionMissionTitle}
               </h2>
               <div className={styles.goldBarCenter} />
             </div>
@@ -81,7 +79,7 @@ export default function WhoWeAre({ params: { locale } }) {
             <div className={styles.centerHeader}>
 
               <h2 className={styles.sectionTitle}>
-                {isAr ? 'قيمنا' : 'Our Values'}
+                {w.ourValuesTitle}
               </h2>
               <div className={styles.goldBarCenter} />
             </div>
